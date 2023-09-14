@@ -1,0 +1,43 @@
+public class Solution {
+
+    public static void main(String[] args) {
+
+        int[] array = {1, 2, 4, 5, 16, 41, 53, 77, 86};
+        twoSum(array, 9);
+
+        int[] finished = twoSum(array,9);
+
+     System.out.print("["  + finished[0] + "," + finished[1] + "]"); 
+
+
+    }
+
+    public static int[] twoSum(int[] nums, int target) {
+       int[] returningStatement = null;
+        int[] returningStatement2 = null;
+
+        int[] nums1 = nums;
+
+        int target1 = target;
+
+        for (int i = 0; i < nums.length; i++) {
+            //System.out.println("1." + nums1[i]);
+            for (int j = i + 1; j < nums.length; j++) {
+               // System.out.println("2." + nums1[j]);
+                if ((nums[i] + nums[j]) == target) {
+                    returningStatement = new int[]{nums[i], nums[j]};
+                    returningStatement2 = new int[]{i,j};
+
+                    //System.out.println(nums[i] + " " + nums[j]);
+
+
+
+                }else {
+                    //System.out.println("null");
+                }
+
+            }
+        }
+        return returningStatement2;
+    }
+}
